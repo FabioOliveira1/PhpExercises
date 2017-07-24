@@ -22,82 +22,88 @@
 			$this->empates = $novoLutador["empates"];
 		}
 
-		private function getNome(){
+		public function getNome(){
 			return $this->nome;
 		}
-		private function setNome($value){
+		public function setNome($value){
 			$this->nome = $value;
 		}
-		private function getNacionalidade(){
+		public function getNacionalidade(){
 			return $this->nacionalidade;
 		}
-		private function setNacionalidade($state){
+		public function setNacionalidade($state){
 			$this->nacionalidade = $state;
 		}
-		private function getIdade(){
+		public function getIdade(){
 			return $this->idade;
 		}
-		private function setIdade($state){
+		public function setIdade($state){
 			$this->idade = $state;
 		}
-		private function getAltura(){
+		public function getAltura(){
 			return $this->altura;
 		}
-		private function setAltura($value){
+		public function setAltura($value){
 			$this->altura = $value;
 		}
-		private function getPeso(){
+		public function getPeso(){
 			return $this->peso;
 		}
-		private function setPeso($state){
+		public function setPeso($state){
 			$this->peso = $state;
-			$this->setCategoria($state);
+			$this->setCategoria();
 		}
-		private function getCategoria(){
+		public function getCategoria(){
 			return $this->categoria;
 		}
-		private function setCategoria($state){
-			if($state < 52.2)
+		private function setCategoria(){
+			if($this->peso < 52.2)
 				$this->categoria = "Inválido";
-			else if($state <= 70.3)
+			else if($this->peso <= 70.3)
 				$this->categoria = "Leve";
-			else if($state <= 83.9)
+			else if($this->peso <= 83.9)
 				$this->categoria = "Médio";
-			else if($state <= 120.2)
+			else if($this->peso <= 120.2)
 				$this->categoria = "Pesado";
 			else
 				$this->categoria = "Inválido";
 		}
-		private function getVitorias(){
+		public function getVitorias(){
 			return $this->vitorias;
 		}
-		private function setVitorias($value){
+		public function setVitorias($value){
 			$this->vitorias = $value;
 		}
-		private function getDerrotas(){
+		public function getDerrotas(){
 			return $this->derrotas;
 		}
-		private function setDerrotas($state){
+		public function setDerrotas($state){
 			$this->derrotas = $state;
 		}
-		private function getEmpates(){
+		public function getEmpates(){
 			return $this->empates;
 		}
-		private function setEmpates($state){
+		public function setEmpates($state){
 			$this->empates = $state;
 		}
 
 		public function apresentar(){
-			print_r($this);
+			echo "<br/>";
+			echo "<br/>nome: ".($this->getNome())."<br/>";
+			echo "<br/>Nacionalidade: ".($this->getNacionalidade())."<br/>";
+			echo "<br/>Idade: ".($this->getIdade())."<br/>";
+			echo "<br/>Altura: ".($this->getAltura())."<br/>";
+			echo "<br/>Peso: ".($this->getPeso())."<br/>";
+			echo "<br/>";
 		}
 		public function status(){
-			echo "<br/>"
-			echo "<br/>nome: ".($this->getNome())."<br/>"
-			echo "<br/>Vitorias: ".($this->getVitorias())."<br/>"
-			echo "<br/>Derrotas: ".($this->getDerrotas())."<br/>"
-			echo "<br/>Empates: ".($this->getEmpates())."<br/>"
-			echo "<br/>Categoria: ".($this->getCategoria())."<br/>"
-			echo "<br/>"
+			echo "<br/>";
+			echo "<br/>nome: ".($this->getNome())."<br/>";
+			echo "<br/>Vitorias: ".($this->getVitorias())."<br/>";
+			echo "<br/>Derrotas: ".($this->getDerrotas())."<br/>";
+			echo "<br/>Empates: ".($this->getEmpates())."<br/>";
+			echo "<br/>Categoria: ".($this->getCategoria())."<br/>";
+			echo "<br/>";
 		}
 		public function ganharLuta(){
 			$this->setVitorias($this->getVitorias() + 1);

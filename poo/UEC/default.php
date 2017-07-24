@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>POO PHP</title>
+		<style type="text/css">
+			html{ color: white; background-color: black;}
+		</style>
 	</head>
 	<body>
 		<pre>
 		<?php
 			require_once "Lutador.php";
+			require_once "Luta.php";
 			$lutadores = array();
 			$dados = array();
 			$dados["nome"] = "Pretty Boy";
@@ -69,10 +73,17 @@
 			$dados["derrotas"] = 2;
 			$dados["empates"] = 4;
 			$lutadores[] = new Lutador($dados);
-			print_r($lutadores);
+			// print_r($lutadores);
 			// foreach ($lutadores as $lutador) {
+			// 	echo "______________";
 			// 	$lutador->apresentar();
+			// 	echo "--------------";
+			// 	$lutador->status();
+			// 	echo "______________";
 			// }
+			$uec01 = new Luta();
+			$uec01->marcarLuta($lutadores[0], $lutadores[0]);
+			$uec01->lutar();
 		?>
 		</pre>
 	</body>
