@@ -11,10 +11,10 @@
 		}
 
 		public function locomover(){
-			echo "<br/>A ave de $this->peso Kg, $this->idade anos, $this->membros membros e cor da pena $this->corPena está se locomovendo.";
+			echo "<br/>A ave de $this->peso Kg, $this->idade anos, $this->membros membros e cor da pena $this->corPena está voando.";
 		}
 		public function alimentar(){
-			echo "<br/>A ave de $this->peso Kg, $this->idade anos, $this->membros membros e cor da pena $this->corPena está se alimentando.";
+			echo "<br/>A ave de $this->peso Kg, $this->idade anos, $this->membros membros e cor da pena $this->corPena está comendo frutas.";
 		}
 		public function emitirSom(){
 			echo "<br/>A ave de $this->peso Kg, $this->idade anos, $this->membros membros e cor da pena $this->corPena está emitindo som.";

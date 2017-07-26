@@ -11,17 +11,17 @@
 		}
 
 		public function locomover(){
-			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama está se locomovendo.";
+			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama está nadando.";
 		}
 		public function alimentar(){
-			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama está se alimentando.";
+			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama está comendo substâncias.";
 		}
 		public function emitirSom(){
 			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama não emite som.";
 		}
 
 		public function soltarBolha(){
-			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama está soltando bolhas.";
+			echo "<br/>O peixe de $this->peso Kg, $this->idade anos, $this->membros membros e cor da escama $this->corEscama está soltando bolha.";
 		}
 
 	}
