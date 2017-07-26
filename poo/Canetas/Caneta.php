@@ -1,4 +1,4 @@
-<?php 
+<?php
 	class Caneta{
 		public $modelo;
 		public $cor;
@@ -28,7 +28,7 @@
 		public function tampar(){
 			$this->tampada = true;
 		}
-		public function destampar(){	
+		public function destampar(){
 			$this->tampada = false;
 		}
 

@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<pre>
-		<?php 
+		<?php
 			require_once "Caneta.php";
 			$c1 = new Caneta("BIC Cristal", "Azul", 0.5);
 			$c2 = new Caneta("BIC", "Verde", 1.0);
