@@ -172,6 +172,22 @@
 			$a[9]->emitirSom();
 			$a[9]->fazerNinho();
 			echo "<br/>";
+
+
+			$k = new Cachorro();
+
+			$k->reagirFrase("Ola");
+			$k->reagirFrase("Vai apanhar");
+
+			$k->reagirHora(11,45);
+			$k->reagirHora(21,00);
+			$k->reagirFrase("Vai apanhar");
+
+			$k->reagirDono(true);
+			$k->reagirDono(false);
+
+			$k->reagirIdadePeso(2, 12.5);
+			$k->reagirIdadePeso(17, 4.5);
 		?>
 		</pre>
 	</body>
