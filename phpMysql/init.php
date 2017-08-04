@@ -15,19 +15,22 @@
 
 			// Performing SQL query
 			$query = 'SELECT g.nome, c.nome FROM gafanhotos as g join rel_gaf_curs as r on r.idgaf = g.id join cursos as c on r.idcurso = c.idcurso order by g.nome';
+			// $query = 'SELECT * FROM gafanhotos as g where nome="abcdasdas"';
 			$result = mysqli_query($link, $query) or die('Query failed: ' . mysqli_error());
 			echo '<br/>Query successfully';
 
-			// Printing results in HTML
-			echo "<table>\n";
-			while ($line = mysqli_fetch_row($result)) {
-    			echo "\t<tr>\n";
-			    foreach ($line as $col_value) {
-        			echo "\t\t<td>$col_value</td>\n";
-			    }
-    			echo "\t</tr>\n";
+			if (mysqli_num_rows($result) > 0) {
+				// Printing results in HTML
+				echo "<table>\n";
+				while ($line = mysqli_fetch_row($result)) {
+	    			echo "\t<tr>\n";
+				    foreach ($line as $col_value) {
+	        			echo "\t\t<td>$col_value</td>\n";
+				    }
+	    			echo "\t</tr>\n";
+				}
+				echo "</table>\n";
 			}
-			echo "</table>\n";
 
 			// Free resultset
 			mysqli_free_result($result);
